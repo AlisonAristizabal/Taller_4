@@ -11,10 +11,10 @@ import javax.swing.JPanel;
 import uniandes.dpoo.taller4.modelo.Tablero;
 
 public class PBotones extends JPanel{
-	private Tablero tablero;
+	private PTablero tablero;
 	private PTop10 top;
 	public PBotones() {
-		this.tablero = new Tablero(5);
+		POpcionesT opciones = new POpcionesT();
 		this.setLayout(new GridLayout(4,1,20,20));
 		JButton bNuevo = new JButton("Nuevo");
 		add(bNuevo);
@@ -22,7 +22,8 @@ public class PBotones extends JPanel{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				tablero = new Tablero(5);
+				tablero = new PTablero();
+				tablero.nuevoTablero(Integer.parseInt(opciones.getTamañoT().getText()));
 			}
 		});
 		JButton bReiniciar = new JButton("Reiniciar");

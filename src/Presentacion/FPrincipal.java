@@ -19,8 +19,8 @@ public class FPrincipal extends JFrame{
 		this.add(this.opcionesJ,BorderLayout.NORTH);
 		this.botones = new PBotones();
 		this.add(this.botones,BorderLayout.EAST);
-		//this.tablero = new PTablero(opcionesJ);
-		//this.add(this.tablero,BorderLayout.WEST);
+		this.tablero = new PTablero();
+		this.add(this.tablero,BorderLayout.WEST);
 		this.setVisible(true);
 	}
 	public static void main(String[] args) {
