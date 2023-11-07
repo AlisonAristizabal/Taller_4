@@ -16,6 +16,7 @@ import javax.swing.JTextField;
 public class POpcionesT extends JPanel{
 	private String opcionSeleccionada = null;
 	private JTextField tamañoT;
+	private String matriz;
 	
 	public POpcionesT() {
 		this.setLayout(new GridLayout(1,2,3,3));
@@ -37,7 +38,6 @@ public class POpcionesT extends JPanel{
         group.add(facil);
         group.add(medio);
         group.add(dificil);
-        
         ActionListener dificultad = new ActionListener() {
 
 			@Override
@@ -60,6 +60,11 @@ public class POpcionesT extends JPanel{
         add(facil);
         add(medio);
         add(dificil);
+        
+	}
+
+	public String getMatriz() {
+		return matriz;
 	}
 
 	public String getOpcionSeleccionada() {

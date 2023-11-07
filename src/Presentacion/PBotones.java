@@ -23,7 +23,7 @@ public class PBotones extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				tablero = new PTablero();
-				tablero.nuevoTablero(Integer.parseInt(opciones.getTamañoT().getText()));
+				tablero.nuevoTablero(Integer.parseInt(opciones.getMatriz()));
 			}
 		});
 		JButton bReiniciar = new JButton("Reiniciar");
